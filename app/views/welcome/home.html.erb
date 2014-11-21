@@ -27,7 +27,7 @@
       <div class="panel-heading">
         <h3 class="panel-title">Tasks</h3>
       </div>
-      <div class="panel-body" style="height:100px">
+      <div class="panel-body panel-fixed">
         Grouped by projects and lists. Just the way you like'em.
       </div>
     </div>
@@ -62,11 +62,18 @@
     </div>
   </div>
 
-<ul>
-  <% @quotes.each do |quotes| %>
-    <br><%= quotes %><br>
+  <% @quotes.each do |quote| %>
+    <% text = quote.first %>
+    <% origin = quote.last %>
+    <p>
+      <%= text %>
+    </p>
+    <p class="text-muted"><em>
+      <%= origin %>
+    </em></p>
   <% end %>
-</ul>
+
+
 
 
 
