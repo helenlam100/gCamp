@@ -6,5 +6,5 @@ class WelcomeController < ApplicationController
     third_quote = Quote.new("Better Ingredients, Better Pizza", "-Pap John's")
     @quotes = [first_quote, second_quote, third_quote]
   end
-
+  
 end
