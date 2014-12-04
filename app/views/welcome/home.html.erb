@@ -66,11 +66,13 @@
   <% @quotes.each do |quote| %>
     <% text = quote.quote %>
     <% origin = quote.author %>
-
-    <%= text %>
-    <ul>
-      <font color="grey"><i><%= origin %></i></font>
-    </ul>
+    <p>
+      <%= text %>
+    </p>
+      <p class="text-muted"><em>
+        <%= origin %>
+      </em></p>
     <% end %>
   </div>
+
 </div>
