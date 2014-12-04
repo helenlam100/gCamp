@@ -72,3 +72,5 @@ class TasksController < ApplicationController
       params.require(:task).permit(:description)
     end
 end
+
+#helper methods to use later: .where, and .
