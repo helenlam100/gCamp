@@ -1,6 +1,5 @@
 <div class="page-header">
-
-  <div class="pull-right">
+  <div class="col-md-2 pull-right">
     <%= link_to 'New Task', new_task_path, class: "btn btn-info btn-md" %>
   </div>
   <h1>Tasks</h1>
@@ -10,14 +9,18 @@
   <thead>
     <tr>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th>Complete</th>
+      <th>Due Date</th>
     </tr>
   </thead>
 
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td class="col-md-8"><%= task.description %></td>
+        <td class="col-md-4"><%= task.description %></td>
+        <td class="col-md-4"><%= task.completed %></td>
+        <td class="col-md-4"><%= task.due_date %></td>
+
         <td><%= link_to 'Show', task, class: "btn btn-success btn-md" %></td>
         <td><%= link_to 'Edit', edit_task_path(task), class: "btn btn-info btn-md"  %></td>
         <td><%= link_to 'Delete', task, class: "btn btn-danger btn-md", method: :delete, data: { confirm: 'Are you sure?' } %></td>
