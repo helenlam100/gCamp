@@ -19,6 +19,20 @@
 </div>
 
 <div class="form-group">
+    <%= f.label :due_date, class: "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <%= f.date_field :due_date, class: "form-control" %>
+    </div>
+  </div>
+
+<div class="form-group">
+    <div class="col-sm-offset-2">
+      <%= f.check_box :completed %>
+        Completed
+    </div>
+  </div>
+
+<div class="form-group">
   <div class="col-md-4 col-sm-offset-1">
     <div class="actions">
       <%= f.submit class: "btn btn-primary" %>

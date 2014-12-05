@@ -12,6 +12,10 @@ class TasksController < ApplicationController
   def show
   end
 
+  def complete
+
+  end
+
   # GET /tasks/new
   def new
     @task = Task.new
