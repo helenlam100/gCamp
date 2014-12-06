@@ -7,6 +7,12 @@ class TasksController < ApplicationController
   # GET /tasks.json
   def index
     @tasks = Task.all
+
+    if params[:completed] == "false"
+      @tasks = @tasks.where({completed: false})
+    end
+
+
   end
 
   # GET /tasks/1
@@ -82,16 +88,6 @@ class TasksController < ApplicationController
       )
     end
 
-  #   private
-  # def event_params
-  #   params.require(:event).permit(
-  #   :date,
-  #   :description,
-  #   :requires_id,
-  #   :capacity,
-  #   :directions,
-  #   )
-  # end
 end
 
 #helper methods to use later: .where, and .
