@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+  #only run set_task method for the show, edit, update and destroy actions
+
   # GET /tasks
   # GET /tasks.json
   def index
