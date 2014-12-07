@@ -1,6 +1,6 @@
 <div class="page-header">
 
-  <div class = "col-md-2 pull-right">
+  <div class = "col-md-1 pull-right">
     <%= link_to 'New Task', new_task_path, class: "btn btn-info btn-md" %>
   </div>
 
@@ -8,6 +8,7 @@
     <%= link_to "All", tasks_path %>
     |
     <%= link_to "Incomplete", tasks_path(filter_params({completed: false})) %>
+    <!-- {completed: false} is the filter object that goes through the method filter_params -->
   </div>
 
   <h1>Tasks</h1>

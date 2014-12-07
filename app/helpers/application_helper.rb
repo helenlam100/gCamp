@@ -1,6 +1,7 @@
 module ApplicationHelper
 
   def filter_params(filter)
+
     return_hash = {
       completed: params[:completed],
     }
