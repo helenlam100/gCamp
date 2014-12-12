@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
     <nav class="navbar navbar-default navbar-fixed-top navbar-inverse"  role="navigation">
 
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -19,31 +19,25 @@
           </a>
         </div>
       </div>
-
-
-
       <!-- Collect the nav links, forms, and other content for toggling -->
       <!-- /.container-fluid -->
     </nav>
 
-<div class="container">
-    <%= yield %>
-    <!-- everything you put in your html.erb shows up in yield -->
-</div>
+    <div class="container">
+      <%= yield %>
+      <!-- everything you put in your html.erb shows up in yield -->
+    </div>
 
-<div class="container">
-
-
-    <footer>
-      <hr>
-      <%= link_to "About", about_path %> |
-      <%= link_to "Terms", terms_path %> |
-      <%= link_to "FAQ", faqs_path %> |
-      <%= link_to "Tasks", tasks_path %> |
-      <%= link_to "Users", users_path %>
-    </footer>
-  </div>
-
+    <div class="container">
+      <footer>
+        <hr>
+        <%= link_to "About", about_path %> |
+        <%= link_to "Terms", terms_path %> |
+        <%= link_to "FAQ", faqs_path %> |
+        <%= link_to "Tasks", tasks_path %> |
+        <%= link_to "Users", users_path %>
+      </footer>
+    </div>
   </div>
 </body>
 </html>
