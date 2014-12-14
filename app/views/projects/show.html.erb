@@ -1,0 +1,11 @@
+<% if notice %>
+<div id="notice" class="alert alert-success text-center" role="alert"><%= notice %></div>
+<% end %>
+
+<div class= "page-header">
+  <div class= "pull-right">
+    <%=  link_to "Edit", edit_project_path(@project), class: "btn btn-info btn-md"%>
+    <%= link_to 'Delete', @project, method: :delete, class: "btn btn-danger btn-md" %>
+  </div>
+  <h1><%= "#{@project.name}" %></h1>
+</div>
