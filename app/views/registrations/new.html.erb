@@ -1,52 +1,59 @@
-<h1>Sign Up</h1>
+<div class="well col-md-8 col-md-offset-2">
 
-<%= form_for @user, url: signup_path do |f| %>
+  <h1>Sign Up for gCamp!</h1>
+
+  <%= form_for(@user, url: signup_path, html: {class: "form-group"}) do |f| %>
 
   <% if @user.errors.present? %>
+  <div class="alert alert-danger">
     <ul>
       <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
     </ul>
+  </div>
   <% end %>
 
-  <div>
-    <%= f.label :first_name %>
-  </div>
-  <div>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label :first_name, class: "control-label" %>
   </div>
 
-  <div>
-    <%= f.label :last_name %>
-  </div>
-  <div>
-    <%= f.text_field :last_name %>
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control" %>
   </div>
 
+  <div class="form-group">
+    <%= f.label :last_name, class: "control-label" %>
+  </div>
   <div>
+    <%= f.text_field :last_name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :email %>
   </div>
   <div>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= f.label :password %>
   </div>
   <div>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, class: "form-control" %>
   </div>
 
-  <div>
-    <%= f.label :password_confirmation %>
+  <div class="form-group">
+    <%= f.label :password_confirmation, class: "control-label" %>
   </div>
-  <div>
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div>
-    <%= f.submit "Sign up" %>
+  <div class>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
   </div>
 
-<% end %>
+
+  <div style="margin-top: 30px">
+    <%= f.submit "Sign up", class: "btn btn-primary", id: "signup-user-action" %>
+  </div>
+
+  <% end %>
+</div>
