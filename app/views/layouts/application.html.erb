@@ -17,11 +17,26 @@
           <a class="navbar-brand" href="/">
             gCamp
           </a>
+
+          <!-- <%#= link_to "Sign Up", signup_path %>
+          <%#= link_to "Sign In", signin_path %> -->
+
+          <div>
+            <% if current_user %>
+            <%= link_to "Sign Out", signout_path %>
+            <% else %>
+            <%= link_to "Sign Up", signup_path %>
+            |
+            <%= link_to "Sign In", signin_path %>
+            <% end %>
+          </div>
+
         </div>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <!-- /.container-fluid -->
     </nav>
+
 
     <div class="container">
       <%= yield %>
@@ -35,7 +50,8 @@
         <%= link_to "Terms", terms_path %> |
         <%= link_to "FAQ", faqs_path %> |
         <%= link_to "Tasks", tasks_path %> |
-        <%= link_to "Users", users_path %>
+        <%= link_to "Users", users_path %> |
+        <%= link_to "Projects", projects_path %> |
       </footer>
     </div>
   </div>
